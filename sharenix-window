@@ -36,9 +36,9 @@ elif command -v scrot > /dev/null 2>&1; then
 elif command -v shot > /dev/null 2>&1; then
     shot --output=$sharenixtmp --active-window || exit $?
 else
-    echo "Couldn't find scrot, maim, shot, gnome-screenshot or " \
-         "xfce4-screenshooter."
-    echo "Please install either of them and try again"
+    echo "Couldn't find xfce-screenshooter, gnome-screenshot, " \
+         " maim, scrot or shot!"
+    echo "Please install any of those and try again."
     exit 1
 fi
 

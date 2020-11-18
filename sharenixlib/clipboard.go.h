@@ -6,8 +6,8 @@
 /* terrible hack to add set_can_store
    TODO: PR proper implementation to go-gtk */
 
-static void _gtk_clipboard_set_can_store(void* clip) {
-    gtk_clipboard_set_can_store((GtkClipboard*)clip, 0, 0);
+static void _gtk_clipboard_set_can_store(void *clip) {
+	gtk_clipboard_set_can_store((GtkClipboard *)clip, 0, 0);
 }
 
 #endif

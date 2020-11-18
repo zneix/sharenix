@@ -23,14 +23,9 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/BurntSushi/xgb"
-	"github.com/mattn/go-gtk/gdk"
-	"github.com/mattn/go-gtk/glib"
-	"github.com/mattn/go-gtk/gtk"
 	"html"
 	"image/png"
 	"io"
-	"mvdan.cc/xurls"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -41,6 +36,12 @@ import (
 	"strings"
 	"time"
 	"unsafe"
+
+	"github.com/BurntSushi/xgb"
+	"github.com/mattn/go-gtk/gdk"
+	"github.com/mattn/go-gtk/glib"
+	"github.com/mattn/go-gtk/gtk"
+	"mvdan.cc/xurls/v2"
 )
 
 const (
@@ -133,7 +134,7 @@ func ReplaceKeywords(input, extension string, sitecfg *SiteConfig) {
 		sitecfg.Arguments[i] = replacer(sitecfg.Arguments[i])
 	}
 
-	for k, _ := range sitecfg.Headers {
+	for k := range sitecfg.Headers {
 		sitecfg.Headers[k] = replacer(sitecfg.Headers[k])
 	}
 

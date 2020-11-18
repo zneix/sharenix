@@ -58,8 +58,6 @@ func IsImage(mimeType string) bool {
 	default:
 		return false
 	}
-
-	return false
 }
 
 // FileExists returns true if the given directory or file exists

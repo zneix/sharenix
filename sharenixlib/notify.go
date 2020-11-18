@@ -17,15 +17,16 @@ package sharenixlib
 
 import (
 	"fmt"
+	"os"
+	"path"
+	"time"
+	"unsafe"
+
 	"github.com/BurntSushi/xgb"
 	"github.com/mattn/go-gtk/gdk"
 	"github.com/mattn/go-gtk/glib"
 	"github.com/mattn/go-gtk/gtk"
 	"github.com/mattn/go-gtk/pango"
-	"os"
-	"path"
-	"time"
-	"unsafe"
 )
 
 func lockName(index int) string {

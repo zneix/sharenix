@@ -19,14 +19,15 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/ChrisTrenkamp/goxpath"
-	"github.com/ChrisTrenkamp/goxpath/tree/xmltree"
-	"github.com/Francesco149/jsonpath"
 	"net/url"
 	"regexp"
 	"strconv"
 	"strings"
 	"unicode"
+
+	"github.com/ChrisTrenkamp/goxpath"
+	"github.com/ChrisTrenkamp/goxpath/tree/xmltree"
+	"github.com/Francesco149/jsonpath"
 )
 
 // TODO: named regex support

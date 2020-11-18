@@ -22,9 +22,10 @@ package sharenixlib
 import "C"
 
 import (
+	"unsafe"
+
 	"github.com/mattn/go-gtk/gdk"
 	"github.com/mattn/go-gtk/gtk"
-	"unsafe"
 )
 
 // GetClipboard returns the default display's GTK clipboard

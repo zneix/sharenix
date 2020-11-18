@@ -39,14 +39,14 @@ elif command -v scrot > /dev/null 2>&1; then
 elif command -v shot > /dev/null 2>&1; then
     shot --output=$sharenixtmp --interactive || exit $?
 else
-    echo "Couldn't find scrot, maim, shot, gnome-screenshot or " \
-         "xfce4-screenshooter."
-    echo "Please install either of them and try again"
+    echo "Couldn't find xfce-screenshooter, flameshot, gnome-screenshot, " \
+         " maim, scrot or shot!"
+    echo "Please install any of those and try again."
     exit 1
 fi
 
 # check file size (0b means that gnome-screenshot was cancelled)
-sharenixtmpsize=$(wc -c <"$sharenixtmp")
+sharenixtmpsize=$(wc -c < "$sharenixtmp")
 
 if [ $sharenixtmpsize != 0 ]; then
     sharenix -n "$@" $sharenixtmp

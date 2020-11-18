@@ -17,12 +17,13 @@ package sharenixlib
 
 import (
 	"fmt"
-	"github.com/kardianos/osext"
 	"os"
 	"os/user"
 	"path"
 	"strings"
 	"time"
+
+	"github.com/kardianos/osext"
 )
 
 func GetExeDir() (execpath string, err error) {
@@ -115,8 +116,6 @@ func GenerateArchivedFilename(extension string) (string, error) {
 			return p, fmt.Errorf("Failed to generate unique filename")
 		}
 	}
-
-	return "", fmt.Errorf("This should never happen")
 }
 
 // GetHistoryCSV returns the absolute path to the history csv.

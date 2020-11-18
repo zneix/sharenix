@@ -18,8 +18,8 @@ package sharenixlib
 import (
 	"encoding/json"
 	"io/ioutil"
-	"path"
 	"os"
+	"path"
 )
 
 // A SiteConfig holds the json ShareX config for a single site
@@ -118,8 +118,6 @@ func (cfg *Config) IsDefaultSite(site string) bool {
 	default:
 		return false
 	}
-
-	return false
 }
 
 // HandleFileType tries to find and return the most suitable site to upload the

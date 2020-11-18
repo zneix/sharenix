@@ -17,12 +17,13 @@ package sharenixlib
 
 import (
 	"errors"
-	"github.com/BurntSushi/xgb"
-	"github.com/BurntSushi/xgb/xinerama"
-	"github.com/BurntSushi/xgb/xproto"
 	"image"
 	"image/draw"
 	"sort"
+
+	"github.com/BurntSushi/xgb"
+	"github.com/BurntSushi/xgb/xinerama"
+	"github.com/BurntSushi/xgb/xproto"
 )
 
 // This file is heavily inspired by https://github.com/vova616/screenshot
